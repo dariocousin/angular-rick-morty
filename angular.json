@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "rick-morty-angular"
+    }
+  },
+  "defaultProject": "rick-morty-angular",
+  "cli": {
+    "analytics": false
+  }
 }
