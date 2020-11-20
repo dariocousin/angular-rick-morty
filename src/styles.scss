@@ -1,23 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-@font-face{
-    font-family: 'RickMorty';
-    src: url('assets/fonts/shlop.ttf');
-}
-*{
-    font-family: RickMorty;
-}
-
-h1{
-    font-size: 8em;
-    text-align: center;
-}
-
-nav{
-    font-size: 4em;
-    text-align: center;
-}
-
-nav > ul > li{
-    display: inline-block;
-    padding-right: 20px;
-}
+@import './styles/imports/settings.imports';
+@import './styles/imports/generic.imports';
+@import './styles/imports/blocks.imports';
