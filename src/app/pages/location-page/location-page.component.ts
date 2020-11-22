@@ -1,3 +1,4 @@
+import { LocationsService } from './../../shared/services/locations.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LocationPageComponent implements OnInit {
 
-  constructor() { }
+  locationsList;
+
+  constructor(private locationServices: LocationsService) { }
 
   ngOnInit(): void {
+    this.locationServices.getLocations().subscribe(
+      (res: any) => {
+        this.locationsList = res.results;
+      }
+    )
   }
 
 }

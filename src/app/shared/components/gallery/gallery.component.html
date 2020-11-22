@@ -1,8 +1,9 @@
 <div class="c-gallery">
     <div class="row">
-        <div routerLink="/characters/{{item.id}}" class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let item of galleryList">
-            <figure class="c-gallery__figure" >
-                <img class="c-gallery__img" src="{{item.image}}" alt="{{item.name}}">
+        <div  class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let item of galleryList">
+            <button (click)="addFavoriteService(item)" >Add to favorite</button>
+            <figure routerLink="/characters/{{item.id}}" class="c-gallery__figure" >
+                <img class="c-gallery__img" src="{{item.image ? item.image : 'assets/img/earth.png'}}" alt="{{item.name}}">
                 <figcaption class="c-gallery__figcaption"><span class="c-gallery__text" >{{item.name}}</span></figcaption>
             </figure>
         </div>

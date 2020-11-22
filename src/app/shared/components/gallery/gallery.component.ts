@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { FavoritePageService } from '../../services/local/favorite-page.service';
 
 @Component({
   selector: 'app-gallery',
@@ -9,10 +10,18 @@ export class GalleryComponent implements OnInit {
 
   @Input() galleryList;
 
-  constructor() { }
+  constructor(private itemToAddFavorite: FavoritePageService) { }
 
   ngOnInit(): void {
 
   }
+
+  addFavoriteService(item){
+    this.itemToAddFavorite.addFavorite(item);
+  }
+
+  // showFavoritesPage(){
+  //   this.pageFavorites = true;
+  // }
 
 }

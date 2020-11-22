@@ -9,7 +9,7 @@ import { CharactersService } from 'src/app/shared/services/characters.service';
 })
 export class CharacterDetailsPageComponent implements OnInit {
 
-  characterDetail = {};
+  characterDetail: any = {};
 
   constructor(private route: ActivatedRoute, private characterServices: CharactersService) { }
 
@@ -18,7 +18,8 @@ export class CharacterDetailsPageComponent implements OnInit {
       const id = params.get('id');
 
       this.characterServices.getCharacter(id).subscribe(character => {
-          this.characterDetail = character;
+        // console.log(character);
+        this.characterDetail = character;
       })
     })
   }
