@@ -1,3 +1,4 @@
+import { LocationDetailPageComponent } from './pages/location-page/pages/location-detail-page/location-detail-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { FavoritesPageComponent } from './pages/favorites-page/favorites-page.component';
 import { LocationPageComponent } from './pages/location-page/location-page.component';
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: 'characters', component: CharacterPageComponent},
   {path: 'characters/:id', component: CharacterDetailsPageComponent},
   {path: 'locations', component: LocationPageComponent},
+  {path: 'locations/:id', component: LocationDetailPageComponent},
   {path: 'favorites', component: FavoritesPageComponent},
   {path: 'contact', component: ContactPageComponent},
 ];

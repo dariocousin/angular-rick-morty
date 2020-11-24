@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { GalleryComponent } from './shared/components/gallery/gallery.component';
 import { CharacterDetailsPageComponent } from './pages/character-page/pages/character-details-page/character-details-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LocationDetailPageComponent } from './pages/location-page/pages/location-detail-page/location-detail-page.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     FavoritesPageComponent,
     ContactPageComponent,
     GalleryComponent,
-    CharacterDetailsPageComponent
+    CharacterDetailsPageComponent,
+    LocationDetailPageComponent
   ],
   imports: [
     BrowserModule,

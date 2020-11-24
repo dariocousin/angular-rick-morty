@@ -13,8 +13,16 @@ export class FavoritePageService {
     this.favorites.push(newFavorite);
   }
 
+  removeFavorite(itemToRemove){
+    this.favorites.find(x => x.id === itemToRemove.id).splice(1, 1);
+  }
+
   getFavorites(){
     return this.favorites;
+  }
+
+  getFavoriteId(id){
+    return this.favorites.find(x => x.id === id);
   }
 
 }

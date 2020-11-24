@@ -10,14 +10,29 @@ export class GalleryComponent implements OnInit {
 
   @Input() galleryList;
 
-  constructor(private itemToAddFavorite: FavoritePageService) { }
+  @Input() url = 'characters';
+
+  insideFavorite: boolean;
+
+  constructor(private itemFavoriteService: FavoritePageService) { }
 
   ngOnInit(): void {
 
   }
 
   addFavoriteService(item){
-    this.itemToAddFavorite.addFavorite(item);
+    this.itemFavoriteService.addFavorite(item);
+    this.alreadyFavorite(item.id);
+  }
+
+  removeFavoriteService(item){
+    this.itemFavoriteService.removeFavorite(item);
+  }
+
+  alreadyFavorite(id){
+    if(this.itemFavoriteService.getFavoriteId(id)){
+      this.insideFavorite = true;
+    }
   }
 
   // showFavoritesPage(){
