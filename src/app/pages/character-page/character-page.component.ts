@@ -1,5 +1,6 @@
 import { CharactersService } from './../../shared/services/characters.service';
 import { Component, OnInit } from '@angular/core';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-character-page',
@@ -14,7 +15,7 @@ export class CharacterPageComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.charactersServices.getCharacters().subscribe(
+    this.charactersServices.getCharacters().pipe(take(1)).subscribe(
       (res: any) => {
         this.charactersList = res.results;
       }

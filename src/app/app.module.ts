@@ -14,6 +14,7 @@ import { GalleryComponent } from './shared/components/gallery/gallery.component'
 import { CharacterDetailsPageComponent } from './pages/character-page/pages/character-details-page/character-details-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LocationDetailPageComponent } from './pages/location-page/pages/location-detail-page/location-detail-page.component';
+import { PriorityNamePipe } from './shared/pipes/priority-name.pipe';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LocationDetailPageComponent } from './pages/location-page/pages/locatio
     ContactPageComponent,
     GalleryComponent,
     CharacterDetailsPageComponent,
-    LocationDetailPageComponent
+    LocationDetailPageComponent,
+    PriorityNamePipe
   ],
   imports: [
     BrowserModule,

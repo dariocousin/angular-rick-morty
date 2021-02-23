@@ -22,17 +22,14 @@ export class GalleryComponent implements OnInit {
 
   addFavoriteService(item){
     this.itemFavoriteService.addFavorite(item);
-    this.alreadyFavorite(item.id);
   }
 
   removeFavoriteService(item){
     this.itemFavoriteService.removeFavorite(item);
   }
 
-  alreadyFavorite(id){
-    if(this.itemFavoriteService.getFavoriteId(id)){
-      this.insideFavorite = true;
-    }
+  alreadyFavorite(item){
+    return this.itemFavoriteService.getFavoriteId(item);
   }
 
   // showFavoritesPage(){
